@@ -70,6 +70,9 @@ const cli = meow(
 			dryRun: {
 				type: "boolean",
 			},
+			noTag: {
+				type: "boolean",
+			},
 		},
 	}
 );
