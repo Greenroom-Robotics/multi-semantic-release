@@ -70,7 +70,7 @@ const cli = meow(
 			dryRun: {
 				type: "boolean",
 			},
-			noTag: {
+			skipTag: {
 				type: "boolean",
 			},
 		},
@@ -84,10 +84,10 @@ const processFlags = (flags) => {
 		}
 
 		// FIXME Smth wrong with negate parser.
-		if (flags[`no${k[0].toUpperCase()}${k.slice(1)}`]) {
-			flags[k] = false;
-			return set(m, k, false);
-		}
+		// if (flags[`no${k[0].toUpperCase()}${k.slice(1)}`]) {
+		// 	flags[k] = false;
+		// 	return set(m, k, false);
+		// }
 
 		return set(m, k, v);
 	}, {});
